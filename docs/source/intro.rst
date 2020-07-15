@@ -47,7 +47,7 @@ A lot of people claim EECS 203 is a useless class where you will never need any 
 
     .. container:: header
 
-        **EECS Extension**
+
 
     .. container:: blank
 
