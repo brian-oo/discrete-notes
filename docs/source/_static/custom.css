@@ -3,10 +3,10 @@
     clear: both;
 }
 
-.toggle .header:after {
+.toggle .header {
     content: " ▶ click me";
 }
 
-.toggle .header.open:after {
+.toggle .header.open {
     content: " ▼ clicked";
 }
