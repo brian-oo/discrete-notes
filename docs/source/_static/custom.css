@@ -1,0 +1,12 @@
+.eecs {
+    display: block;
+    clear: both;
+}
+
+.eecs:before {
+    content: " ▶ EECS Extension";
+}
+
+.eecs.open:before {
+    content: " ▼ EECS Extension";
+}

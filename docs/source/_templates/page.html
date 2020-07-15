@@ -1,0 +1,14 @@
+{% extends "!page.html" %}
+
+{% block footer %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".eecs > *").hide();
+        $(".eecs").show();
+        $(".eecs").click(function () {
+            $(this).children().toggle(400);
+            $(this).toggleClass("open");
+        })
+    });
+</script>
+{% endblock %}
