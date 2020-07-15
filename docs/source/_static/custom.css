@@ -1,7 +1,6 @@
 .eecs {
     display: block;
     clear: both;
-    color: red;
 }
 
 .eecs:before {
@@ -9,5 +8,5 @@
 }
 
 .eecs.open:before {
-    content: " ▼ EECS Extension";
+    content: " ▼ EECS Extension2";
 }
