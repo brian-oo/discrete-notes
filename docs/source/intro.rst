@@ -47,12 +47,9 @@ A lot of people claim EECS 203 is a useless class where you will never need any 
 
     .. container:: header
 
-        **Show/Hide Code**
+        **EECS Extension**
 
-    .. code-block:: xml
-       :linenos:
-
-       from plone import api
-       ...
+    .. container:: blank
+        I should be hidden
 
 This should be after. I think it works
