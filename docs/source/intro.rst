@@ -47,4 +47,4 @@ A lot of people claim EECS 203 is a useless class where you will never need any 
 
     This is an EECS Extension
 
-This should be after. I think it works. Maybe?
+This should be after. I think it works. 

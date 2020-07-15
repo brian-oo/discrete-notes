@@ -1,6 +1,7 @@
 .eecs {
     display: block;
     clear: both;
+    color: red;
 }
 
 .eecs:before {
