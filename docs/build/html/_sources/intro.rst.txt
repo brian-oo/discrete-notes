@@ -43,8 +43,16 @@ A lot of people claim EECS 203 is a useless class where you will never need any 
 .. Note::
     These notes are not designed to be a substitute for lecture. Additionally, these notes may cover topics that will not be explicitly covered in class, nor will these notes be guaranteed to cover every topic that will be tested on in class. These notes are designed to serve a supplementary purpose at the guideance of its handsome author.
 
-.. container:: eecs
+.. container:: toggle
 
-    This is an EECS Extension
+    .. container:: header
 
-This should be after. I think it works.
+        **Show/Hide Code**
+
+    .. code-block:: xml
+       :linenos:
+
+       from plone import api
+       ...
+
+This should be after. I think it works

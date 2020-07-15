@@ -1,12 +1,12 @@
-.eecs {
+.toggle .header {
     display: block;
     clear: both;
 }
 
-.eecs:before {
-    content: " ▶ EECS Extension";
+.toggle .header:after {
+    content: " ▶ click me";
 }
 
-.eecs.open:before {
-    content: " ▼ EECS Extension2";
+.toggle .header.open:after {
+    content: " ▼ clicked";
 }
