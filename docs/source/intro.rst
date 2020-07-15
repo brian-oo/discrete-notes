@@ -47,9 +47,12 @@ A lot of people claim EECS 203 is a useless class where you will never need any 
 
     .. container:: header
 
-        **EECS Extension**
+        **Show/Hide Code**
 
     .. container:: blank
-        I should be hidden
 
-This should be after. I think it works
+       Please work
+
+
+
+This should be after. I think it works.
