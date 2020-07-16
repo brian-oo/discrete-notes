@@ -84,7 +84,7 @@ If we want to express both the logical expression of both :math:`p` and :math:`q
 .. tip:: 
     Implication is naturally unintuitive. Saying that if :math:`p` then :math:`q` suggests that there is a causal relationship between :math:`p` and :math:`q`, however we must obey the truth table. The proposition ":math:`(0 = 1) \rightarrow` *pigs can fly*" is true. This is because :math:`(0 = 1)` is false and "*pigs can fly*" is false, and according to the truth table  :math:`F \rightarrow F = T`. It takes practice to intuitively understand how implications work. 
 
-    * If :math:`p` is true, then the truth value of :math:`p \rightarrow q`depends on :math:`q`.
+    * If :math:`p` is true, then the truth value of :math:`p \rightarrow q` depends on :math:`q`.
     * If :math:`p` is false, then the truth value of :math:`p \rightarrow q` is true, no matter what :math:`q` is.
     * It may help to look from the false perspective: :math:`p \rightarrow q` is false **only** if :math:`p` is true and :math:`q` is false.
 
