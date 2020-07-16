@@ -52,3 +52,17 @@ License
 -------
 
 The project is licensed under the BSD license.
+
+.. container:: toggle
+
+    .. container:: header
+
+        **▶ EECS Extension**
+
+    .. container:: blank
+
+       This is an EECS Extension!
+
+
+
+This should be after. I think it works.

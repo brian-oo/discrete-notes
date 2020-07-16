@@ -3,20 +3,21 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to My's documentation!
+Welcome to Discrete Math Notes.
 ========================================
 
 .. toctree::
-   :caption: Introduction
+   :caption: Foundations
    :maxdepth: 2
 
-   intro
+   intro/intro
+
 
 .. toctree::
     :maxdepth: 2
-    :numbered:
-    :caption: Body
+    :caption: Logic
 
+    logic/proplogic
     first
     second
 
