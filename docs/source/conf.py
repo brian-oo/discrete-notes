@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Discrete Math'
+project = 'Discrete Math Notes'
 copyright = '2020, Brian Oo'
 author = 'Brian Oo'
 
