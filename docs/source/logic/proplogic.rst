@@ -19,7 +19,9 @@ In order to begin our journey in any proof-based math class, we must start with 
     .. container:: header
 
         **▶ EECS Extension**
+        
         |
+
 
     .. compound:: 
 
