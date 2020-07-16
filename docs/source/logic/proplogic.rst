@@ -20,7 +20,7 @@ In order to begin our journey in any proof-based math class, we must start with 
 
         **▶ EECS Extension**
 
-    .. container:: blank
+    .. compound:: 
 
        Requiring propositions be either true or false, not neither or both, is more than a math principle. Propositions in the coding world can be considered as ``boolean`` where at any given point your ``boolean`` is true/false, but never nothing nor both. This extends even further, down to the hardware. On a circuitry level, wires and transistors can either be on or off. This is determined through voltage levels. Most transistors have a threshold voltage, such that once a particular wire reaches a threshold voltage, the transistor turns on. Gather thousands of silicon transistors together, and you just made a microprocessor.
 
