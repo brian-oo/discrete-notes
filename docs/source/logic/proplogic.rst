@@ -5,7 +5,6 @@ Propositional Logic
 
 .. contents:: Table of Contents
     :local:
-    :depth: 1 
 
 ------------
 Propositions
@@ -19,9 +18,6 @@ In order to begin our journey in any proof-based math class, we must start with 
     .. container:: header
 
         **▶ EECS Extension**
-        
-        |
-
 
     .. compound:: 
 
@@ -35,8 +31,7 @@ Note that we do not have to know the truth value of a proposition to consider it
 
 ----
 
-Sample Problem
-^^^^^^^^^^^^^^
+**Sample Problem**
 
 Which of the following are propositions: 
 
@@ -66,5 +61,31 @@ Which of the following are propositions:
 
 ----
 
-Number 6 is tricky. 
+Number 6 is tricky. :math:`8 \cdot x = 16` is a proposition only if we have a value for :math:`x`. At the moment, the statement is a predicate because we are unsure what :math:`x` is. If :math:`x` was a sandwich, then the proposition :math:`8 \cdot x = 16` makes no sense. Only once we define posible values (domain) for :math:`x` then we can claim there is a truth value. "Given that :math:`x` is a real number, :math:`8 \cdot x = 16`" is a proposition since although we do not know if the value of :math:`x` , we know that the statement is either true or false, thus making it a proposition. 
+
+---------------------
+Compound Propositions
+---------------------
+
+In order to simplify logical expressions, we can use letters: such as :math:`p, q, r` to represent propositions. Let's say we have propositions: :math:`p =` "*It rained today*" and :math:`q =` "*I brought my umbrella today*". How could we express the logical statement: "*It rained today and I brought my umbrella.*" We could define a new proposition, :math:`r` to represent this statement, however this will get tedious the more and more expressions we have. The way to combine propositions is with logical operators.
+
+=================
+Logical Operators
+=================
+
+If we want to express both the logical expression of both :math:`p` and :math:`q`, we use the *and* operator: :math:`\wedge`. Therefore, to represent the statement "*It rained today and I brought my umbrella*": :math:`p \wedge q`. A table of logical operators is below: 
+
+[INSERT TABLE BELOW]
+
+.. admonition:: Or vs. Xor
+
+    In logic we have two ways to express the English word "*or*". This is because there are some instances where we need an inclusive-or or an exclusive-or (xor). For example, the or in "*Today or tomorrow is her birthday*" is an exclusive-or since both situations can not both be true. Meanwhile the or in "*Would you like cream or sugar*" is inclusive because wanting cream, sugar, or both would all be valid responses.
+
+.. tip:: 
+    Implication is naturally unintuitive. Saying that if :math:`p` then :math:`q` suggests that there is a causal relationship between :math:`p` and :math:`q`, however we must obey the truth table. The proposition ":math:`(0 = 1) \rightarrow` *pigs can fly*" is true. This is because :math:`(0 = 1)` is false and "*pigs can fly*" is false, and according to the truth table  :math:`F \rightarrow F = T`. It takes practice to intuitively understand how implications work. 
+
+    * If :math:`p` is true, then the truth value of :math:`p \rightarrow q`depends on :math:`q`.
+    * If :math:`p` is false, then the truth value of :math:`p \rightarrow q` is true, no matter what :math:`q` is.
+    * It may help to look from the false perspective: :math:`p \rightarrow q` is false **only** if :math:`p` is true and :math:`q` is false.
+
 

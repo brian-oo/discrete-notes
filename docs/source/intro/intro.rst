@@ -4,6 +4,7 @@ Introduction to Discrete Math
 ******************************
 
 .. contents:: Table of Contents
+    :local:
 
 -----------------------
 Discrete vs. Continuous
