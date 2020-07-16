@@ -28,7 +28,6 @@ The other major component of a proposition is that it be a declarative statement
 
 Note that we do not have to know the truth value of a proposition to consider it a proposition. "Aliens exist" is a proposition, however we do not know its truth value. Nonetheless we can still use propositional logic on this proposition, despite not knowing its exact truth value. **Axioms** are propositions, that we assume to be true and are assumed to be true at all times, such as :math:`1 + 1 = 2`. 
 
-
 ----
 
 **Sample Problem**
@@ -41,7 +40,6 @@ Which of the following are propositions:
 4. This statement is false.
 5. :math:`8 \cdot 2 = 16`
 6. :math:`8 \cdot x = 16`
-
 
 .. container:: toggle
 
@@ -58,7 +56,6 @@ Which of the following are propositions:
         5. Proposition, its truth value is true.
         6. Not a Proposition. This is a predicate.
 
-
 ----
 
 Number 6 is tricky. :math:`8 \cdot x = 16` is a proposition only if we have a value for :math:`x`. At the moment, the statement is a predicate because we are unsure what :math:`x` is. If :math:`x` was a sandwich, then the proposition :math:`8 \cdot x = 16` makes no sense. Only once we define posible values (domain) for :math:`x` then we can claim there is a truth value. "Given that :math:`x` is a real number, :math:`8 \cdot x = 16`" is a proposition since although we do not know if the value of :math:`x` , we know that the statement is either true or false, thus making it a proposition. 
@@ -69,23 +66,77 @@ Compound Propositions
 
 In order to simplify logical expressions, we can use letters: such as :math:`p, q, r` to represent propositions. Let's say we have propositions: :math:`p =` "*It rained today*" and :math:`q =` "*I brought my umbrella today*". How could we express the logical statement: "*It rained today and I brought my umbrella.*" We could define a new proposition, :math:`r` to represent this statement, however this will get tedious the more and more expressions we have. The way to combine propositions is with logical operators.
 
-=================
-Logical Operators
-=================
+If we want to express both the logical expression of both :math:`p` and :math:`q`, we use the *and* operator: :math:`\wedge`. Therefore, to represent the statement "*It rained today and I brought my umbrella*": :math:`p \wedge q`. 
 
-If we want to express both the logical expression of both :math:`p` and :math:`q`, we use the *and* operator: :math:`\wedge`. Therefore, to represent the statement "*It rained today and I brought my umbrella*": :math:`p \wedge q`. A table of logical operators is below: 
+.. table:: Table of Compound Propositions
+    :widths: auto
+    :align: center
 
-[INSERT TABLE BELOW]
+    =============   ===========================   ====================================
+    Name            Compound Proposition          Expression in English
+    =============   ===========================   ====================================
+    Negation        :math:`\neg p`                "Not :math:`p`"
+    And             :math:`p \wedge q`            ":math:`p` and :math:`q`"
+    Or              :math:`p \vee q`              ":math:`p` or :math:`q` (or both)"
+    Xor             :math:`p \oplus q`            ":math:`p` or :math:`q` (not both)"
+    Implication     :math:`p \rightarrow q`       "If :math:`p` then :math:`q`"
+    Biconditional   :math:`p \leftrightarrow q`   ":math:`p` if and only if :math:`q`"
+    =============   ===========================   ====================================
+
+Translating between logic and English at times can be unclear and ambigious and so we use **truth tables** to clearly define the meaning of a compound proposition. A truth table is a representation of truth values for a compound propositions given truth values for the base propositions. 
+
+Compound propositions, just like regular propositions, must maintain only one truth value at a time, however that truth value may change depending on the truth value of the base propositions it's made out of. Typically, all possible input combinations are depicted in the truth table. If a compound proposition has :math:`n` different base propositions, then the truth table to fully represent it will need :math:`2^n` rows.
+
+.. table:: Truth Table for Compound Propositions
+    :widths: auto
+    :align: center
+    
+    ========= ========= =============== ================== ================ ================== ======================= ===========================
+    :math:`p` :math:`q` :math:`\neg p`  :math:`p \wedge q` :math:`p \vee q` :math:`p \oplus q` :math:`p \rightarrow q` :math:`p \leftrightarrow q`
+    ========= ========= =============== ================== ================ ================== ======================= ===========================
+    T         T         F               T                  T                F                  T                       T
+    T         F         F               F                  T                T                  T                       F
+    F         T         T               F                  T                T                  F                       F
+    F         F         T               F                  F                F                  T                       T
+    ========= ========= =============== ================== ================ ================== ======================= ===========================
 
 .. admonition:: Or vs. Xor
 
     In logic we have two ways to express the English word "*or*". This is because there are some instances where we need an inclusive-or or an exclusive-or (xor). For example, the or in "*Today or tomorrow is her birthday*" is an exclusive-or since both situations can not both be true. Meanwhile the or in "*Would you like cream or sugar*" is inclusive because wanting cream, sugar, or both would all be valid responses.
 
 .. tip:: 
-    Implication is naturally unintuitive. Saying that if :math:`p` then :math:`q` suggests that there is a causal relationship between :math:`p` and :math:`q`, however we must obey the truth table. The proposition ":math:`(0 = 1) \rightarrow` *pigs can fly*" is true. This is because :math:`(0 = 1)` is false and "*pigs can fly*" is false, and according to the truth table  :math:`F \rightarrow F = T`. It takes practice to intuitively understand how implications work. 
+    Implication is naturally unintuitive. Saying that if :math:`p` then :math:`q` suggests that there is a causal relationship between :math:`p` and :math:`q`, however we must obey the truth table for implications. The proposition ":math:`(0 = 1) \rightarrow` *pigs can fly*" is true. This is because :math:`(0 = 1)` is false and "*pigs can fly*" is false, and according to the truth table  :math:`F \rightarrow F = T`. It takes practice to intuitively understand how implications work. 
 
     * If :math:`p` is true, then the truth value of :math:`p \rightarrow q` depends on :math:`q`.
     * If :math:`p` is false, then the truth value of :math:`p \rightarrow q` is true, no matter what :math:`q` is.
     * It may help to look from the false perspective: :math:`p \rightarrow q` is false **only** if :math:`p` is true and :math:`q` is false.
+
+----
+
+**Sample Problem**
+
+Fix
+
+.. container:: toggle
+
+    .. container:: header
+
+        **▶ Solution**
+
+    .. container:: blank
+
+        Fix
+
+----
+
+--------------------
+Logical Equivalances
+--------------------
+
+Truth Tables
+^^^^^^^^^^^^
+
+Logical Identities
+^^^^^^^^^^^^^^^^^^
 
 
