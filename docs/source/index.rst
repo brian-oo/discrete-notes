@@ -18,7 +18,3 @@ Welcome to Discrete Math Notes.
     :caption: Logic
 
     logic/proplogic
-    first
-    second
-
-        

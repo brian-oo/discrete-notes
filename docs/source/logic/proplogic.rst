@@ -115,7 +115,17 @@ Compound propositions, just like regular propositions, must maintain only one tr
 
 **Sample Problem**
 
-Fix
+Let :math:`p, q` and :math:`r` be the propositions:
+
+* :math:`p`: "*You walk the dog*."
+* :math:`q`: "*You go on a run*."
+* :math:`r`: "*You eat ice cream*."
+
+Represent each of the following statements into compound propositions:
+
+1. You did not go on a run.
+2. You eat ice cream, but you did not walk the dog.
+3. You walking the dog and going on a run is sufficient for eating ice cream.
 
 .. container:: toggle
 
@@ -125,7 +135,9 @@ Fix
 
     .. container:: blank
 
-        Fix
+        1. :math:`\neg q`
+        2. :math:`r \wedge \neg q`
+        3. :math:`(p \wedge q) \rightarrow r`
 
 ----
 
@@ -173,7 +185,7 @@ Logical Identities
 ^^^^^^^^^^^^^^^^^^
 A truth table works great for small compound propositions without many different elementary propositions; however, as these propositions get larger, it will require larger and more complex truth tables to fully prove logical equivalance. The other method we use to prove logical equivalances is with **logical identities** (equivalance laws). Just as in algebra, you can use distributive, commutative, associative, and many other laws to simplify equations, we can use equivalance laws to simplify propositions.
 
-.. table:: Logical Identities
+.. table:: Table of Logical Identities
     :widths: auto
     :align: center
         
@@ -203,3 +215,70 @@ A truth table works great for small compound propositions without many different
     Definition of Biconditional Statement   :math:`p \leftrightarrow q = (p \rightarrow q) \wedge (q \rightarrow p)`
     ======================================= ========================================================================
 
+----
+
+**Sample Problem**
+
+Prove the following logical equivalance using *both* truth tables and logical identities:
+
+.. math::
+    p \wedge q = \neg (p \rightarrow \neg q)
+
+.. container:: toggle
+
+    .. container:: header
+
+        **▶ Solution**
+
+    .. container:: blank
+
+        Truth Table:
+
+        .. table:: 
+            :widths: auto
+            :align: center
+
+            ========= ========= ================== ===================================
+            :math:`p` :math:`q` :math:`p \wedge q` :math:`\neg (p \rightarrow \neg q)`
+            ========= ========= ================== ===================================
+            T           T       T                  T 
+            T           F       F                  F 
+            F           T       F                  F
+            F           F       F                  F 
+            ========= ========= ================== ===================================
+
+        Since both compound propositions have the same truth table, they are logically equivalent.
+
+        Logical Identities:
+
+        .. math::
+            \begin{align}
+            & \neg (p \rightarrow \neg q) & \text{Given} \\
+            & = \neg (\neg p \vee \neg q) & \text{Definition of Conditional Statement} \\
+            &= \neg ( \neg p) \wedge \neg (\neg q) & \text{De Morgan's Law} \\
+            &= p \wedge q & \text{Double Negatation Law}
+            \end{align}
+
+----
+
+.. container:: toggle
+
+    .. container:: header
+
+        **▶ EECS Extension**
+
+    .. container:: blank
+
+        Combining propositions to create logical equivalances can also be seen through logic circuits. In logic circuits, propositions represent 1s and 0s values, rather than true and false. Additionally, in order to combine values, we use gates that represent the same logical operators we defined earlier (OR, NOT, AND, XOR). Two or more inputs go into a gate, and out comes the result according to the circuit gate. These logic circuits form the basis of combinational logic and logic design. Below is a sample logic gate as well as it's propositional equivalances.
+
+        .. image:: logicgate.png
+            :alt: logic_gate
+            :align: center
+
+
+        In logic design, we typically use mathematical symbols, like ``+``, ``*``, and ``'`` to represent OR, AND, and NOT respectively, however all of the logical principles learned in propositional logic still hold. We can also use logical equivalances, such as through truth tables or logical identities to simplify outputs. For example, the output in our circuit above is :math:`(\neg ( \neg p \wedge q ) \vee r ) \wedge ( \neg p \wedge q )`, however we can simplify this to :math:`r \wedge \neg p \wedge q`. For math purposes, this doesn't do much besides making the proposition cleaner and easier to work with, however on a hardware level, where each gate costs power and money, simplifying expressions to require as few gates as possible is very important.
+
+
+
+
+        
