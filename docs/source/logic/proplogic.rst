@@ -177,29 +177,40 @@ A truth table works great for small compound propositions without many different
     :widths: auto
     :align: center
         
-    ======================================= ========================================================================================================================
-    Name                                    Equivalence                                     
-    ======================================= ========================================================================================================================
-    Identity Law                            | :math:`p \wedge \textbf{T} = p` 
-                                            | :math:`p \vee  \textbf{F} = p`
-    Domination Law                          | :math:`p \vee \textbf{T}  =\textbf{T}` 
-                                            | :math:`p \wedge \textbf{F} = \textbf{F}`
-    Idempotent Law                          | :math:`p \vee p = p` 
-                                            | :math:`p \wedge p = p`
-    Double Negation Law                     :math:`\neg ( \neg p) = p`
-    Commutative Law                         | :math:`p \wedge q = q \wedge p` 
-                                            | :math:`p \vee q = q \vee p`
-    Associative Law                         | :math:`(p \wedge q) \wedge r = p \wedge (q \wedge r)` 
-                                            | :math:`(p \vee q) \vee r = p \vee (q \vee r)`
-    Distributive Law                        | :math:`p \wedge (q \vee r) = (p \vee q) \wedge (p \vee r)` 
-                                            | :math:`p \vee (q \wedge r) = (p \wedge q) \vee (p \wedge r)`
-    De Morgan's Law                         | :math:`\neg (p \wedge q) = \neg p \vee \neg q` 
-                                            | :math:`\neg (p \vee q) = \neg p \wedge \neg q`
-    Absorption Law                          | :math:`p \wedge (p \vee q) = p` 
-                                            | :math:`p \vee (p \wedge q) = p`
-    Negation Law                            | :math:`p \wedge \neg p = \textbf{F}` 
-                                            | :math:`p \vee \neg p = \textbf{T}`
-    Definition of Conditional Statement     :math:`p \rightarrow q = \neg p \vee q`
-    Definition of Biconditional Statement   :math:`p \leftrightarrow q = (p \rightarrow q) \wedge (q \rightarrow p)`
-    ======================================= ========================================================================================================================
+    +--------------------------------------+----------------------------------------------------------------------------+
+    | Name                                 | Equivalence                                                                |                         
+    +======================================+=========================================================================+==+
+    Identity Law                           | :math:`p \wedge \textbf{T} = p`                                            |
+                                           | :math:`p \vee  \textbf{F} = p`                                             |
+    +--------------------------------------+----------------------------------------------------------------------------+
+    Domination Law                         | :math:`p \vee \textbf{T}  =\textbf{T}`                                     | 
+                                           | :math:`p \wedge \textbf{F} = \textbf{F}`                                   |
+    +--------------------------------------+----------------------------------------------------------------------------+                                        
+    Idempotent Law                         | :math:`p \vee p = p`                                                       |
+                                           | :math:`p \wedge p = p`                                                     |
+    +--------------------------------------+----------------------------------------------------------------------------+                                        
+    Double Negation Law                    |:math:`\neg ( \neg p) = p`                                                  |
+    +--------------------------------------+----------------------------------------------------------------------------+
+    Commutative Law                        | :math:`p \wedge q = q \wedge p`                                            |
+                                           | :math:`p \vee q = q \vee p`                                                |
+    +--------------------------------------+----------------------------------------------------------------------------+                                        
+    Associative Law                        | :math:`(p \wedge q) \wedge r = p \wedge (q \wedge r)`                      |
+                                           | :math:`(p \vee q) \vee r = p \vee (q \vee r)`                              |
+    +--------------------------------------+----------------------------------------------------------------------------+                                        
+    Distributive Law                       | :math:`p \wedge (q \vee r) = (p \vee q) \wedge (p \vee r)`                 |
+                                           | :math:`p \vee (q \wedge r) = (p \wedge q) \vee (p \wedge r)`               |
+    +--------------------------------------+----------------------------------------------------------------------------+                                        
+    De Morgan's Law                        | :math:`\neg (p \wedge q) = \neg p \vee \neg q`                             |
+                                           | :math:`\neg (p \vee q) = \neg p \wedge \neg q`                             |
+    +--------------------------------------+----------------------------------------------------------------------------+                                        
+    Absorption Law                         | :math:`p \wedge (p \vee q) = p`                                            |
+                                           | :math:`p \vee (p \wedge q) = p`                                            |
+    +--------------------------------------+----------------------------------------------------------------------------+                                        
+    Negation Law                           | :math:`p \wedge \neg p = \textbf{F}`                                       |
+                                           | :math:`p \vee \neg p = \textbf{T}`                                         |
+    +--------------------------------------+----------------------------------------------------------------------------+                                        
+    Definition of Conditional Statement    | :math:`p \rightarrow q = \neg p \vee q`                                    |
+    +--------------------------------------+----------------------------------------------------------------------------+
+    Definition of Biconditional Statement  | :math:`p \leftrightarrow q = (p \rightarrow q) \wedge (q \rightarrow p)`
+    +--------------------------------------+----------------------------------------------------------------------------+
 
