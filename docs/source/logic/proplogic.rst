@@ -133,10 +133,73 @@ Fix
 Logical Equivalances
 --------------------
 
+Two propositions are considered the same if they are **logically equivalent**, meaning that they mean the exact same thing in terms of logic. This means that given an input of propositions with truth values, the two propositions will always result in the same truth value. **Tautologies** are propositions that are always true, while **contradictions** are tautologies that are always false. Take the proposition :math:`\neg p \vee p`. Either :math:`p` is true or false, meaning that one side of this or statement is true at any given time, meaning the entire compound proposition will equate to true. This means that this proposition is a tautology and is logically equivalent to true. The proposition :math:`\neg p \wedge p` is a contradiction, since there is no scenario with :math:`p` is true *and* false. A proposition is **satisfiable** if there is some set of input that make the proposition true. A proposition is never both a contradiction and satisfiable. 
+
+Some propositions are very complex, yet we still need to see if they are logical equivalences. To do so, we can either use truth tables or logical identities to prove logical equivalance.
+
 Truth Tables
 ^^^^^^^^^^^^
 
+Two compound propositions are logically equivalent if and only if they have the same truth table. Let's try to see if these two statements are logically equivalent: 
+
+* :math:`p` = "*If it's sunny, then I'm outside*"
+* :math:`q` = "*It's not sunny or I'm outside*"
+* Let :math:`a` = "*It's sunny*"
+* Let :math:`b` = "*I'm outside*"
+
+We can translate these statements into compound propositions:
+
+* :math:`p = a \rightarrow b`.
+* :math:`q = \neg a \vee b`.
+
+Now we can use a truth table to see if these result in the same output for every input:
+
+.. table:: Truth Table Test for Logical Equivalance
+    :widths: auto
+    :align: center
+
+    ========= ========= =========================== =========================
+    :math:`a` :math:`b` :math:`p = a \rightarrow b` :math:`q = \neg a \vee b`
+    ========= ========= =========================== =========================
+    T         T         T                           T
+    T         F         F                           F
+    F         T         T                           T
+    F         F         T                           T
+    ========= ========= =========================== =========================
+
+Since the :math:`p` and :math:`q` columns are identical, the propositions are logically equivalent.
+
 Logical Identities
 ^^^^^^^^^^^^^^^^^^
+A truth table works great for small compound propositions without many different elementary propositions; however, as these propositions get larger, it will require larger and more complex truth tables to fully prove logical equivalance. The other method we use to prove logical equivalances is with **logical identities** (equivalance laws). Just as in algebra, you can use distributive, commutative, associative, and many other laws to simplify equations, we can use equivalance laws to simplify propositions.
 
+.. table:: Logical Identities
+    :widths: auto
+    :align: center
+        
+    ======================================= ========================================================================================================================
+    Name                                    Equivalence                                     
+    ======================================= ========================================================================================================================
+    Identity Law                            | :math:`p \wedge \textbf{T} = p` 
+                                            | :math:`p \vee  \textbf{F} = p`
+    Domination Law                          | :math:`p \vee \textbf{T}  =\textbf{T}` 
+                                            | :math:`p \wedge \textbf{F} = \textbf{F}`
+    Idempotent Law                          | :math:`p \vee p = p` 
+                                            | :math:`p \wedge p = p`
+    Double Negation Law                     :math:`\neg ( \neg p) = p`
+    Commutative Law                         | :math:`p \wedge q = q \wedge p` 
+                                            | :math:`p \vee q = q \vee p`
+    Associative Law                         | :math:`(p \wedge q) \wedge r = p \wedge (q \wedge r)` 
+                                            | :math:`(p \vee q) \vee r = p \vee (q \vee r)`
+    Distributive Law                        | :math:`p \wedge (q \vee r) = (p \vee q) \wedge (p \vee r)` 
+                                            | :math:`p \vee (q \wedge r) = (p \wedge q) \vee (p \wedge r)`
+    De Morgan's Law                         | :math:`\neg (p \wedge q) = \neg p \vee \neg q` 
+                                            | :math:`\neg (p \vee q) = \neg p \wedge \neg q`
+    Absorption Law                          | :math:`p \wedge (p \vee q) = p` 
+                                            | :math:`p \vee (p \wedge q) = p`
+    Negation Law                            | :math:`p \wedge \neg p = \textbf{F}` 
+                                            | :math:`p \vee \neg p = \textbf{T}`
+    Definition of Conditional Statement     :math:`p \rightarrow q = \neg p \vee q`
+    Definition of Biconditional Statement   :math:`p \leftrightarrow q = (p \rightarrow q) \wedge (q \rightarrow p)`
+    ======================================= ========================================================================================================================
 

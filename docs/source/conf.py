@@ -23,6 +23,7 @@ author = 'Brian Oo'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1-alpha'
+version = '0.1-alpha'
 
 
 # -- General configuration ---------------------------------------------------
