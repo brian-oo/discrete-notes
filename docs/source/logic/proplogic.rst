@@ -145,7 +145,11 @@ Represent each of the following statements into compound propositions:
 Logical Equivalances
 --------------------
 
-Two propositions are considered the same if they are **logically equivalent**, meaning that they mean the exact same thing in terms of logic. This means that given an input of propositions with truth values, the two propositions will always result in the same truth value. **Tautologies** are propositions that are always true, while **contradictions** are tautologies that are always false. Take the proposition :math:`\neg p \vee p`. Either :math:`p` is true or false, meaning that one side of this or statement is true at any given time, meaning the entire compound proposition will equate to true. This means that this proposition is a tautology and is logically equivalent to true. The proposition :math:`\neg p \wedge p` is a contradiction, since there is no scenario with :math:`p` is true *and* false. A proposition is **satisfiable** if there is some set of input that make the proposition true. A proposition is never both a contradiction and satisfiable. 
+Two propositions are considered the same if they are **logically equivalent**, meaning that they mean the exact same thing in terms of logic. This means that given an input of propositions with truth values, the two propositions will always result in the same truth value. **Tautologies** are propositions that are always true, while **contradictions** are tautologies that are always false. 
+
+Take the proposition :math:`\neg p \vee p`. Either :math:`p` is true or false, meaning that one side of this or statement is true at any given time, meaning the entire compound proposition will equate to true. This means that this proposition is a tautology and is logically equivalent to true. The proposition :math:`\neg p \wedge p` is a contradiction, since there is no scenario with :math:`p` is true *and* false. 
+
+A proposition is **satisfiable** if there is some set of input that make the proposition true. A proposition is never both a contradiction and satisfiable. 
 
 Some propositions are very complex, yet we still need to see if they are logical equivalences. To do so, we can either use truth tables or logical identities to prove logical equivalance.
 

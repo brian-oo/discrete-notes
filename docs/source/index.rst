@@ -18,3 +18,4 @@ Welcome to Discrete Math Notes.
     :caption: Logic
 
     logic/proplogic
+    logic/predlogic

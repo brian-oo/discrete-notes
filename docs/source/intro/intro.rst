@@ -14,11 +14,11 @@ Discrete vs. Continuous
 
 Hi. Welcome to Discrete Math Notes. Here we will study an introduction to discrete mathematics. `Wikipedia <https://en.wikipedia.org/wiki/Discrete_mathematics>`_ defines discrete math as 
 
-    the study of mathematical structures that are fundamentally discrete rather than continuous. In contrast to real numbers that have the property of varying "smoothly", the objects studied in discrete mathematics -- such as integers, graphs, and statements in logic -- do not vary smoothly in this way, but have distinct, seperated values. Discrete mathematics therefore exclused topics in "continuous mathematics" such as calculus or Euclidean geometry.
+    *the study of mathematical structures that are fundamentally discrete rather than continuous. In contrast to real numbers that have the property of varying "smoothly", the objects studied in discrete mathematics -- such as integers, graphs, and statements in logic -- do not vary smoothly in this way, but have distinct, seperated values. Discrete mathematics therefore exclused topics in "continuous mathematics" such as calculus or Euclidean geometry.*
 
 Most math classes you may have taken up to this point are continuous, which makes sense because we live in a continuous world. The real world is not discrete in any manner really, Picasso painted with brushstrokes --not pixels.
 
-However, looking up an image of a Picasso on the internet, no matter how high resolution, will lead you to a pool of pixels, each uniquely defined with a color value. As we approach the world of EECS, information becomes entirely digital. Data is discrete, time occurs in discrete steps, memory, programs, circuits, networks, algorithms are all *discrete*. 
+However, looking up an image of a Picasso on the internet, no matter how high resolution, will lead you to a pool of pixels, each uniquely defined with a color value. As we approach the world of EECS (*Electrical Engineering and Computer Science*), information becomes entirely digital. Data is discrete, time occurs in discrete steps, memory, programs, circuits, networks, algorithms are all *discrete*. 
 
 It is this intersection of math and EECS where we find discrete mathematics, where at the end of the day, everything in computer science is a ``1`` or a ``0``. It is with discrete math, we attempt to understand this digital world; just as Newton and Leibniz invented calculus to explain their natural world, we will use discrete math to explain the digital world. 
 
@@ -26,7 +26,7 @@ It is this intersection of math and EECS where we find discrete mathematics, whe
 Course Topics
 -------------
 
-In this course, we will cover the following topics:
+In these notes, we will cover the following topics:
 
 - Logic
 - Proofs
