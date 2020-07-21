@@ -48,16 +48,16 @@ Then we can represent the the proposition as :math:`T(M,S_1) \wedge T(M,S_2) \we
 Quantification
 --------------
 
-A relation can have just a single argument; we can call this a property of the objects. For example, let :math:`P(x)` be ":math:`x` *will buy an umbrella*". The statement, "*If you buy an umbrella, then I'll buy an umbrella*" can be represented as :math:`P(\text{You}) \rightarrow P(\text{Me})`. 
+A relation can have just a single argument; we can call this a property of the objects. For example, let :math:`P(x)` be ":math:`x` *will buy an apple*". The statement, "*If you buy an apple, then I'll buy an apple*" can be represented as :math:`P(\text{You}) \rightarrow P(\text{Me})`. 
 
-How can we represent the phrase "*Everyone will buy an umbrella*"? We run into the issue where there may be an infinite number of things to account for or we do not know everyone in the list. Nonetheless, we need to represent the fact that everyone will buy an umbrella. 
+How can we represent the phrase "*Everyone will buy an apple*"? We run into the issue where there may be an infinite number of things to account for or we do not know everyone in the list. Nonetheless, we need to represent the fact that everyone will buy an apple. 
 
 To do so, we can use quantifiers. Applying a quantifier to a predicate, creates a proposition.
 
 Universal Quantifier
 ^^^^^^^^^^^^^^^^^^^^
 
-The universal quantifier, represented by the symbol :math:`\forall`, spoken as "*for all*" represents every element. :math:`\forall x P(x)` represents "*Everyone will buy an umbrella*". This can be conceptualized as :math:`P(x_1) \wedge P(x_2) \wedge P(x_3) \wedge ...` , since for every element :math:`x_n`, they must buy an umbrella. 
+The universal quantifier, represented by the symbol :math:`\forall`, spoken as "*for all*" represents every element. :math:`\forall x P(x)` represents "*Everyone will buy an apple*". This can be conceptualized as :math:`P(x_1) \wedge P(x_2) \wedge P(x_3) \wedge ...` , since for every element :math:`x_n`, they must buy an apple. 
 
 Whenever we say for all :math:`x`, we must define the **domain of discourse** (also called the universe of discourse). `Wikipedia <https://en.wikipedia.org/wiki/Domain_of_discourse>`_ defines the domain of discourse as
 
@@ -72,14 +72,120 @@ The existential quantifier, represented by the symbol :math`\exists`, spoken as 
 
 Under the existential quantifier, anywhere from one to every element in the domain of discourse has the property. The existential quantifier can be conceptualized as :math:`P(x_1) \vee P(x_2) \vee P(x_3) \vee ...`, since anywhere from one to all of the elements :math:`x_n` would cause the statement to be true.
 
+------------------
 Nested Quantifiers
-^^^^^^^^^^^^^^^^^^
+------------------
+
+When using multiple instances of an element or multiple different quantifiers, we must be careful with the scope and ordering of these elements, as different propositions can have different meanins when order is changed.
 
 Scope of Quantifiers
-""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^
+
+Let :math:`B(x,y)` mean :math:`x` buys :math:`y`. 
+
+"*Everyone will buy an apple or a pear.*" For this sentence, every person has the option to buy either an apple or a pear, however all people must buy at least one. Everyone does not have to buy the same item. This is represented as:
+
+:math:`\forall x \underline{(B(x, \text{Apple}) \vee B(x, \text{Pear} ) )}`
+
+
+In this example, there is only one quantified variable, :math:`x` and the scope of this variable is the entire underlined statement.
+
+"*Everyone will buy an apple or everyone will buy a pear*." For this sentence every person must buy the same item, and that item is either an apple or a pear. For either item, the entire population must have the same item, or else the statement is false. This is represented as: 
+
+:math:`\forall x \underline{B(x, \text{Apple})} \vee \forall x \underline{B(x, \text{Pear} ) }`
+
+
+In this example there are two quantified variable, and for each variable, there is a unique scope for the variable. This has to potential to cause confusion, so we try to avoid it by having two unique variables representing the two different quantifications. :math:`\forall x \underline{B(x, \text{Apple})} \vee \forall y \underline{B(y, \text{Pear} ) }`
 
 Order of Quantifiers
-""""""""""""""""""""
-
-Negating Quantifiers
 ^^^^^^^^^^^^^^^^^^^^
+
+When using multiple variables and quantifiers, the understanding the order is essential to understanding the statement. Quantifiers are processed in the order they are read, meaning that the first quantifier is applied, and every other quantifier after is contained within the scope of the first quantifier:
+
+Let the domain of :math:`x` be people and let the domain of :math:`y` be items in a shop 
+
+:math:`\forall x \exists y B(x,y)` means for every person, they must buy some item. It does not have to be the same item for everyone, but for each person they must buy some item.
+
+* The :math:`\forall x` scope is created first, meaning for all people, we must handle some proposition
+* Then a :math:`\exists y` scope is create for each person. These :math:`y` do not have to be the same for every person.
+* This can be thought as :math:`\exists y B(x_1, y) \wedge \exists y B(x_2, y) \wedge \exists y B(x_3, y) \wedge ...`
+* Since each instance of :math:`\exists y` is seperate, we can treat this as :math:`\exists y B(x_1, a) \wedge \exists y B(x_2, b) \wedge \exists y B(x_3, c) \wedge ...` where :math:`a,b,c` are in the same domain as :math:`y`.
+* Practically, this just means that every customer :math:`x_1, x_2, x_3, ...` must buy some item :math:`a, b, c,...` however these items do not have to be related, other than all being items from the shop. 
+* It is possible that all items can be the same, however is not required in order for the proposition to be true.
+
+----
+
+**Sample Problem**
+
+Using the same predicates and domains as before, translate the following statements into English.
+
+1. :math:`\forall x \forall y B(x,y)`.
+2. :math:`\exists x \exists y B(x,y)`.
+3. :math:`\forall y \exists x B(x,y)`.
+4. :math:`\exists x \forall y B(x,y)`.
+5. :math:`\exists y \forall x B(x,y)`.
+
+.. container:: toggle
+
+    .. container:: header
+
+        **▶ Solution**
+
+    .. container:: blank
+
+        1. Every person bought every item in the shop.
+        2. There exists a person who bought some item in the shop.
+        3. For every item in the shop, there exists someone who bought it.
+        4. There exists a person who bought every item in the shop.
+        5. There exists some item that everyone in the shop bought.
+
+----
+
+--------------------
+Negating Quantifiers
+--------------------
+
+In order to negate a quantifier, we change the quantifier type and then negate the predicate.
+
+.. math::
+
+    \neg \forall x P(x) \equiv \exists x \neg P(x) \\
+    \neg \exists x P(x) \equiv \forall x \neg P(x)
+
+.. Note::
+    This property comes from De Morgan's law. Recall that according to De Morgan's law, when negating an and or or, we apply the negation to the propositions and switch the logical operator. Also recall that universal and existential quantifiers are really an extended series of ands and ors respectively. 
+
+When negating nested quantifiers, each quantifer gets negated one at a time and any other quantifiers get treated as the interior predicate that gets negated.
+
+----
+
+**Sample Problem**
+
+Simplify the following statement: :math:`\neg \forall a \exists b \forall c P(a, b, c)`
+
+.. container:: toggle
+
+    .. container:: header
+
+        **▶ Solution**
+
+    .. container:: blank
+
+        .. math:: 
+            \begin{aligned}
+                &\neg \forall a \exists b \forall c P(a, b, c) \\
+                & \equiv \exists a \neg ( \exists b \forall c P(a,b,c)) \\
+                & \equiv \exists a \forall b \neg (\forall c P(a,b,c)) \\
+                & \equiv \exists a \forall b \exists c \neg P(a,b,c)
+            \end{aligned}
+
+----
+
+----------------------
+Translating Predicates
+----------------------
+
+
+
+
+

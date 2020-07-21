@@ -196,27 +196,27 @@ A truth table works great for small compound propositions without many different
     ======================================= ========================================================================
     Name                                    Equivalence                                     
     ======================================= ========================================================================
-    Identity Law                            | :math:`p \wedge \textbf{T} = p` 
-                                            | :math:`p \vee  \textbf{F} = p`
-    Domination Law                          | :math:`p \vee \textbf{T}  =\textbf{T}` 
-                                            | :math:`p \wedge \textbf{F} = \textbf{F}`
-    Idempotent Law                          | :math:`p \vee p = p` 
-                                            | :math:`p \wedge p = p`
-    Double Negation Law                     :math:`\neg ( \neg p) = p`
-    Commutative Law                         | :math:`p \wedge q = q \wedge p` 
-                                            | :math:`p \vee q = q \vee p`
-    Associative Law                         | :math:`(p \wedge q) \wedge r = p \wedge (q \wedge r)` 
-                                            | :math:`(p \vee q) \vee r = p \vee (q \vee r)`
-    Distributive Law                        | :math:`p \wedge (q \vee r) = (p \vee q) \wedge (p \vee r)` 
-                                            | :math:`p \vee (q \wedge r) = (p \wedge q) \vee (p \wedge r)`
-    De Morgan's Law                         | :math:`\neg (p \wedge q) = \neg p \vee \neg q` 
-                                            | :math:`\neg (p \vee q) = \neg p \wedge \neg q`
-    Absorption Law                          | :math:`p \wedge (p \vee q) = p` 
-                                            | :math:`p \vee (p \wedge q) = p`
-    Negation Law                            | :math:`p \wedge \neg p = \textbf{F}` 
-                                            | :math:`p \vee \neg p = \textbf{T}`
-    Definition of Conditional Statement     :math:`p \rightarrow q = \neg p \vee q`
-    Definition of Biconditional Statement   :math:`p \leftrightarrow q = (p \rightarrow q) \wedge (q \rightarrow p)`
+    Identity Law                            | :math:`p \wedge \textbf{T} \equiv p` 
+                                            | :math:`p \vee  \textbf{F} \equiv p`
+    Domination Law                          | :math:`p \vee \textbf{T} \equiv \textbf{T}` 
+                                            | :math:`p \wedge \textbf{F} \equiv \textbf{F}`
+    Idempotent Law                          | :math:`p \vee p \equiv p` 
+                                            | :math:`p \wedge p \equiv p`
+    Double Negation Law                     :math:`\neg ( \neg p) \equiv p`
+    Commutative Law                         | :math:`p \wedge q \equiv q \wedge p` 
+                                            | :math:`p \vee q \equiv q \vee p`
+    Associative Law                         | :math:`(p \wedge q) \wedge r \equiv p \wedge (q \wedge r)` 
+                                            | :math:`(p \vee q) \vee r \equiv p \vee (q \vee r)`
+    Distributive Law                        | :math:`p \wedge (q \vee r) \equiv (p \vee q) \wedge (p \vee r)` 
+                                            | :math:`p \vee (q \wedge r) \equiv (p \wedge q) \vee (p \wedge r)`
+    De Morgan's Law                         | :math:`\neg (p \wedge q) \equiv \neg p \vee \neg q` 
+                                            | :math:`\neg (p \vee q) \equiv \neg p \wedge \neg q`
+    Absorption Law                          | :math:`p \wedge (p \vee q) \equiv p` 
+                                            | :math:`p \vee (p \wedge q) \equiv p`
+    Negation Law                            | :math:`p \wedge \neg p \equiv \textbf{F}` 
+                                            | :math:`p \vee \neg p \equiv \textbf{T}`
+    Definition of Conditional Statement     :math:`p \rightarrow q \equiv \neg p \vee q`
+    Definition of Biconditional Statement   :math:`p \leftrightarrow q \equiv (p \rightarrow q) \wedge (q \rightarrow p)`
     ======================================= ========================================================================
 
 ----
@@ -226,7 +226,7 @@ A truth table works great for small compound propositions without many different
 Prove the following logical equivalance using *both* truth tables and logical identities:
 
 .. math::
-    p \wedge q = \neg (p \rightarrow \neg q)
+    p \wedge q \equiv \neg (p \rightarrow \neg q)
 
 .. container:: toggle
 
@@ -258,9 +258,9 @@ Prove the following logical equivalance using *both* truth tables and logical id
         .. math::
             \begin{align}
             & \neg (p \rightarrow \neg q) & \text{Given} \\
-            & = \neg (\neg p \vee \neg q) & \text{Definition of Conditional Statement} \\
-            &= \neg ( \neg p) \wedge \neg (\neg q) & \text{De Morgan's Law} \\
-            &= p \wedge q & \text{Double Negatation Law}
+            & \equiv \neg (\neg p \vee \neg q) & \text{Definition of Conditional Statement} \\
+            & \equiv \neg ( \neg p) \wedge \neg (\neg q) & \text{De Morgan's Law} \\
+            & \equiv p \wedge q & \text{Double Negatation Law}
             \end{align}
 
 ----

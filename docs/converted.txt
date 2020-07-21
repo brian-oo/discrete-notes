@@ -1,6 +1,6 @@
-The universal quantifier, represented by the symbol :math:`\forall`, spoken as "*for all*" represents every element. :math:`\forall x P(x)` represents "*Everyone will buy an umbrella*". This can be conceptualized as :math:`P(x_1) \wedge P(x_2) \wedge P(x_3) \wedge ...` , since for every element :math:`x`, they must buy an umbrella. 
+Using the same predicates and domains as before, translate the following statements into English.
 
-Whenever we say for all :math:`x`, we must define the **domain of discourse** (also called the universe of discourse). [Wikipedia](https://en.wikipedia.org/wiki/Domain_of_discourse) defines the domain of discourse as
-> the set of entities over which certain variables of interest in some formal treatment may range. In first-order logic, the domain of discourse is the set of individuals over which the quantifiers range.
-
-Without defining the domain of discourse, predicates are ambigious. In :math:`\forall x P(x)`, :math:`x` itself be anything, however by specifying the domain of discourse, we can specify our domain as all people, people in this class, pets of people in this class. 
+1. :math:`\forall x \forall y B(x,y)`.
+2. :math:`\exists x \exists y B(x,y)`.
+3. :math:`\forall y \exists x B(x,y)`.
+4. :math:`\exists x \forall y B(x,y)`.
