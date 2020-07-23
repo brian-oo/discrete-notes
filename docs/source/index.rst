@@ -19,3 +19,9 @@ Welcome to Discrete Math Notes.
 
     logic/proplogic
     logic/predlogic
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Discrete Structures
+
+   structures/sets
