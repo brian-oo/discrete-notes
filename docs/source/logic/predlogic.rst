@@ -12,6 +12,8 @@ Predicates
 
 So far we have discussed propositions and logical operators, making compound propositions. Now to further abstract this, we will introduce first-order logic, which utilizes objects, properties, and relations. A **predicate** is a declarative statement with *some terms unspecified*. A predicate *becomes* a proposition when terms are specified. We refer to these terms as *objects*.
 
+An example of a predicate is :math:`f(x): x + 3 = 5`. Similar to a mathematical function, we have an input object that we substitute for every instantiation (:math:`x`) of the variable. :math:`x + 3 = 5` has no truth value, but :math:`2 + 3 = 5` and :math:`5 + 3 = 5` do. Similarly, :math:`f(x)` has no truth value, but :math:`f(2)` and :math:`f(5)` do, making them propositions. Predicates help eliminate redunancy and allow for flexibility with propositional logic.
+
 Take the proposition "*I am taller than both of my sisters, but they're the same height*." If we were to only use propositional logic, we would need 4 propositions:
 
 * :math:`p =` I am taller than my first sister
@@ -33,22 +35,22 @@ We would then translate the original statement as :math:`p \wedge q \wedge \neg 
 
         What does :math:`\neg r` mean? Well if the original proposition means "*My first sister is taller than my second sister*", then the negation of it is "*My first sister is shorter than or the same height as my second sister*." We have to remember that the negation of taller than isn't shorter than, but shorter than or equal to. 
         
-        Applying this negation to both propositions, we get :math:`\neg r \wedge \neg s` meaning "*My first sister's height is less than or the same as my second sister **and** my second sister's height is less than or the same as my first sister*". The only possible way for this to be true is that their heights are the same since both propositions must be true.
+        Applying this negation to both propositions, we get :math:`\neg r \wedge \neg s` meaning "*My first sister's height is less than or the same as my second sister* **and** *my second sister's height is less than or the same as my first sister*". The only possible way for this to be true is that their heights are the same since both propositions must be true.
 
         This is a neat trick we see a lot in mathematics in order to prove two things are equal. Sometimes, it is difficult to directly prove that two things are equal, however easy to prove that one thing is greater-than-or-equal-to another. If we perform this greater-than-or-equal-to proof two times, going in both directions ( :math:`A \geq B` & :math:`B \geq A` ), we can prove that :math:`A = B`. We will see this trick come in again later.
     
-We can use predicate logic to explicitly described objects and relations to describe characteristics between objects.
+We can use predicate logic to explicitly described objects and predicates to describe characteristics between objects.
 
 * Objects: :math:`M` = Me, :math:`S_1` = First Sister, :math:`S_2` = Second Sister
-* Relation: :math:`T(x,y)` = " :math:`x` *is taller than* :math:`y` ".
+* Predicate: :math:`T(x,y)` = " :math:`x` *is taller than* :math:`y` ".
 
-Then we can represent the the proposition as :math:`T(M,S_1) \wedge T(M,S_2) \wedge \neg T(S_1, S_2) \wedge \neg T(S_2, S_1)`. When the variables in a relation are bound to objects, the relation becomes a proposition with a true/false value.
+Then we can represent the the proposition as :math:`T(M,S_1) \wedge T(M,S_2) \wedge \neg T(S_1, S_2) \wedge \neg T(S_2, S_1)`. When the variables in a predicate are bound to objects, the predicate becomes a proposition with a true/false value.
 
 --------------
 Quantification
 --------------
 
-A relation can have just a single argument; we can call this a property of the objects. For example, let :math:`P(x)` be ":math:`x` *will buy an apple*". The statement, "*If you buy an apple, then I'll buy an apple*" can be represented as :math:`P(\text{You}) \rightarrow P(\text{Me})`. 
+A predicate can have just a single argument; we can call this a property of the objects. For example, let :math:`P(x)` be ":math:`x` *will buy an apple*". The statement, "*If you buy an apple, then I'll buy an apple*" can be represented as :math:`P(\text{You}) \rightarrow P(\text{Me})`. 
 
 How can we represent the phrase "*Everyone will buy an apple*"? We run into the issue where there may be an infinite number of things to account for or we do not know everyone in the list. Nonetheless, we need to represent the fact that everyone will buy an apple. 
 
@@ -68,7 +70,7 @@ Without defining the domain of discourse, predicates are ambigious. In :math:`\f
 Existential Quantifier
 ^^^^^^^^^^^^^^^^^^^^^^
 
-The existential quantifier, represented by the symbol :math`\exists`, spoken as "*there exists*" represents some element. In other words, it means at least one element has this property. Again, we must specify to domain of discourse to know what pool of elements we are choosing from.
+The existential quantifier, represented by the symbol :math:`\exists`, spoken as "*there exists*" represents some element. In other words, it means at least one element has this property. Again, we must specify to domain of discourse to know what pool of elements we are choosing from.
 
 Under the existential quantifier, anywhere from one to every element in the domain of discourse has the property. The existential quantifier can be conceptualized as :math:`P(x_1) \vee P(x_2) \vee P(x_3) \vee ...`, since anywhere from one to all of the elements :math:`x_n` would cause the statement to be true.
 
@@ -85,7 +87,7 @@ Let :math:`B(x,y)` mean :math:`x` buys :math:`y`.
 
 "*Everyone will buy an apple or a pear.*" For this sentence, every person has the option to buy either an apple or a pear, however all people must buy at least one. Everyone does not have to buy the same item. This is represented as:
 
-:math:`\forall x \underline{(B(x, \text{Apple}) \vee B(x, \text{Pear} ) )}`
+:math:`\forall x \underline{[B(x, \text{Apple}) \vee B(x, \text{Pear} ) ]}`
 
 
 In this example, there is only one quantified variable, :math:`x` and the scope of this variable is the entire underlined statement.
@@ -109,7 +111,7 @@ Let the domain of :math:`x` be people and let the domain of :math:`y` be items i
 * The :math:`\forall x` scope is created first, meaning for all people, we must handle some proposition
 * Then a :math:`\exists y` scope is create for each person. These :math:`y` do not have to be the same for every person.
 * This can be thought as :math:`\exists y B(x_1, y) \wedge \exists y B(x_2, y) \wedge \exists y B(x_3, y) \wedge ...`
-* Since each instance of :math:`\exists y` is seperate, we can treat this as :math:`\exists y B(x_1, a) \wedge \exists y B(x_2, b) \wedge \exists y B(x_3, c) \wedge ...` where :math:`a,b,c` are in the same domain as :math:`y`.
+* Since each instance of :math:`\exists y` is seperate, we can treat this as :math:`\exists a B(x_1, a) \wedge \exists b B(x_2, b) \wedge \exists c B(x_3, c) \wedge ...` where :math:`a,b,c` are in the same domain as :math:`y`.
 * Practically, this just means that every customer :math:`x_1, x_2, x_3, ...` must buy some item :math:`a, b, c,...` however these items do not have to be related, other than all being items from the shop. 
 * It is possible that all items can be the same, however is not required in order for the proposition to be true.
 
@@ -185,6 +187,7 @@ Simplify the following statement: :math:`\neg \forall a \exists b \forall c P(a,
 Translating Predicates
 ----------------------
 
+When translating between predicate logic to English, we must be careful with what quantifier, logical operator, and scope we use as changing any one of these even slightly may change the meaning of your logical statement drastically.
 
 
 
