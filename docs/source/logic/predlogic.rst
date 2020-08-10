@@ -187,8 +187,18 @@ Simplify the following statement: :math:`\neg \forall a \exists b \forall c P(a,
 Translating Predicates
 ----------------------
 
-When translating between predicate logic to English, we must be careful with what quantifier, logical operator, and scope we use as changing any one of these even slightly may change the meaning of your logical statement drastically.
+When translating between predicate logic to English, we must be careful with which quantifier and logical operator we use as changing any one of these even slightly may change the meaning of your logical statement drastically.
 
+Let :math:`T(x)` mean :math:`x` is on the team and let :math:`P(x)` mean :math:`x` must go to practice. Let our domain be all people.
 
+How do we translate: "*Everyone on the team must go to practice*."
 
+Our initial answer might be :math:`\forall x [T(x) \wedge P(x)]`: everyone is on the team and goes to practice. However this is incorrect as it says everyone in the domain must be on the team *and* go to practice. If our domain was everyone on the team, then we would be correct; however, since our domain is all people, if we had someone not on the team and not go to practice, our statement would be false, which is not what we want.
 
+This is because there is a hidden precondition that we are testing for. We really only care if the person went to practice *if* they are on the team. In other words: "*If they are on the team, then they must go to practice.*" That's why the proper translation for this statement would be: :math:`\forall x [T(x) \rightarrow P(x)]`.
+
+Now how do we translate: "*Someone on the team didn't go to practice*."
+
+Our initial answer might be since there is again a hidden precondition, then we would need to use an implies again and get: :math:`\exists x [T(x) \rightarrow \neg P(x)]`. However we run into an issue, again with people not on the team. Suppose everyone on the team went to practice and there is a person who is not on the team and did not go to practice. We would have false implies true, which is true. Therefore there exists someone for which the proposition is true; however our predicate should be false since no one skipped practice. 
+
+For this reason, implies fails and to alleviate this, we address the precondition by using an :math:`\wedge`. The proper translation is :math:`\exists x [T(x) \wedge \neg P(x)]`. There exists someone that is on the team *and* skipped practice. By using an :math:`\wedge` we avoid false positives with people not on the team and still check the condition. 

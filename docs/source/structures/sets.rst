@@ -54,7 +54,7 @@ Let the domain be the integers between 1 and 10 inclusive. :math:`A = \{ 2, 3, 6
     ============    =====================   ==============================         
     Name            Set Operation           Resulting Set
     ============    =====================   ==============================
-    Union           :math:`A \cup B`        :math:`\{1, 2, 3, 5, 6,\}`
+    Union           :math:`A \cup B`        :math:`\{1, 2, 3, 5, 6\}`
     Intersection    :math:`A \cap B`        :math:`\{3, 6\}`
     Complement      :math:`\overline{B}`    :math:`\{2, 4, 7, 8, 9, 10 \}`
     Minus           :math:`A - B`           :math:`\{2\}`
@@ -96,6 +96,17 @@ The empty set will always be in a power set because the empty set is a subset of
 ----------------
 Proofs with Sets
 ----------------
+
+When sets are small, like :math:`A = \{1, 2, 3 \}` and :math:`B = \{ 3, 1, 2 \}` it's easy to determine when two sets are the same. However when two sets are the same or abstract, we need other methods to determine if two sets are equal or not. 
+
+One way to determine if two sets are the equal is by showing that each set is a subset of the other. In other words, we have to do two seperate small proofs that show that :math:`A \subseteq B` and :math:`B \subseteq A`. 
+
+----
+
+    .. include:: proof_set_equal.rst
+
+----
+
 
 Set Identities
 ^^^^^^^^^^^^^^
