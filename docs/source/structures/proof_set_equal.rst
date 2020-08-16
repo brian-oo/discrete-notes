@@ -1,5 +1,3 @@
-**Proof**: :math:`\overline{A \cup B} = \overline{A} \cap \overline{B}`
-
 **Strategy**: We will use two direct proofs to prove both each set is a subset of the other using an arbitrary element of the set.
 
 **Prerequisite Math**: 

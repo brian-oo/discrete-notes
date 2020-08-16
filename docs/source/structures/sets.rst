@@ -103,7 +103,15 @@ One way to determine if two sets are the equal is by showing that each set is a 
 
 ----
 
-    .. include:: proof_set_equal.rst
+.. container:: toggle
+
+    .. container:: header
+
+        **▶ Proof:** :math:`\overline{A \cup B} = \overline{A} \cap \overline{B}`
+
+    .. container:: blank
+
+        .. include:: proof_set_equal.rst
 
 ----
 
